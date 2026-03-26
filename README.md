@@ -1,6 +1,42 @@
-# Next.js Boilerplate
+# 🎨 Modern UI Gallery: CSS Refresh Lab
 
-A modern, production-ready Next.js boilerplate with TypeScript, Jest, ESLint, and comprehensive developer tools. Perfect for quickly starting new projects, code challenges, and personal applications.
+This project is a deep dive into the "Great CSS Expansion," focusing on modern architectural patterns, semantic design systems, and resilient refactoring workflows.
+
+## 🚀 Project Goals
+* **Cascade Control:** Master `@layer` to eliminate specificity wars ⚔️.
+* **Semantic Theming:** Implement a Primitive → Semantic color pipeline 🌈.
+* **Logic in CSS:** Use `:has()`, Container Queries, and Nesting to build "intelligent" components 🧠.
+* **Documentation:** Use `docmd` to create a live style guide 📖.
+* **Safety Net:** Use AI visual testing to verify refactors 🛡️.
+
+---
+
+## 🛠 Step-by-Step Tasks
+
+### 1. The Layered Foundation 🧅
+* [ ] Define a global layer hierarchy: `reset`, `base`, `tokens`, `components`, `utilities`.
+* [ ] Ensure `utilities` always wins by placing it last in the order.
+
+### 2. The Color Pipeline 🎨
+* [ ] Define **Primitive** tokens (raw colors like `blue-500`).
+* [ ] Map them to **Semantic** tokens (purpose-driven like `action-primary`).
+* [ ] Implement a Dark Mode toggle using these tokens.
+
+### 3. The "Smart" Feature Card 🃏
+* [ ] Build a card that changes layout using **Container Queries** (size-driven, not viewport-driven).
+* [ ] Use the **`:has()` selector** to style the card parent based on internal state (e.g., if a "featured" checkbox is checked).
+* [ ] Use **Native CSS Nesting** for all component styles.
+
+### 4. Documentation with `docmd` 📝
+* [ ] Document the color system in `docs/colors.md`.
+* [ ] Create a component spec for the Feature Card.
+
+### 5. The AI Safety Net Refactor 🤖
+* [ ] Identify "legacy" styles in the boilerplate.
+* [ ] Refactor them into the `@layer components` block.
+* [ ] Use an AI to compare "Before" and "After" screenshots to ensure zero visual regression.
+
+---
 
 ## 🚀 Features
 
