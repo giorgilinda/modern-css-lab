@@ -4,10 +4,10 @@
  */
 
 /** Display name used in layout, metadata, and BaseTemplate header/footer */
-export const APP_NAME = "MyApp";
+export const APP_NAME = "Modern CSS lab";
 
 /** Short description used in page metadata and SEO */
-export const APP_DESCRIPTION = "This is a boilerplate for my apps";
+export const APP_DESCRIPTION = "Test application for new CSS features";
 
 /** Emoji used for favicon and header/footer branding */
 export const APP_EMOJI = "🆕";
