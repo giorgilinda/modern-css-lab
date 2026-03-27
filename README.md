@@ -3,38 +3,54 @@
 This project is a deep dive into the "Great CSS Expansion," focusing on modern architectural patterns, semantic design systems, and resilient refactoring workflows.
 
 ## 🚀 Project Goals
-* **Cascade Control:** Master `@layer` to eliminate specificity wars ⚔️.
-* **Semantic Theming:** Implement a Primitive → Semantic color pipeline 🌈.
-* **Logic in CSS:** Use `:has()`, Container Queries, and Nesting to build "intelligent" components 🧠.
-* **Documentation:** Use `docmd` to create a live style guide 📖.
-* **Safety Net:** Use AI visual testing to verify refactors 🛡️.
+
+- **Cascade Control:** Master `@layer` to eliminate specificity wars ⚔️.
+- **Semantic Theming:** Implement a Primitive → Semantic color pipeline 🌈.
+- **Logic in CSS:** Use `:has()`, Container Queries, and Nesting to build "intelligent" components 🧠.
+- **Documentation:** Use `docmd` to create a live style guide 📖.
+- **Safety Net:** Use AI visual testing to verify refactors 🛡️.
+
+---
+
+## References:
+
+- https://blog.gitbutler.com/the-great-css-expansion
+- https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@layer
+- https://theadminbar.com/semantics-and-primitives-color-system/
+- https://danielabaron.me/blog/css-refactoring-with-an-ai-safety-net/ (csscaffold cascade layers structure + AI visual testing)
+- https://github.com/docmd-io/docmd
 
 ---
 
 ## 🛠 Step-by-Step Tasks
 
 ### 1. The Layered Foundation 🧅
-* [ ] Define a global layer hierarchy: `reset`, `base`, `tokens`, `components`, `utilities`.
-* [ ] Ensure `utilities` always wins by placing it last in the order.
+
+- [ ] Define a global layer hierarchy: `reset`, `base`, `tokens`, `components`, `utilities`.
+- [ ] Ensure `utilities` always wins by placing it last in the order.
 
 ### 2. The Color Pipeline 🎨
-* [ ] Define **Primitive** tokens (raw colors like `blue-500`).
-* [ ] Map them to **Semantic** tokens (purpose-driven like `action-primary`).
-* [ ] Implement a Dark Mode toggle using these tokens.
+
+- [ ] Define **Primitive** tokens (raw colors like `blue-500`).
+- [ ] Map them to **Semantic** tokens (purpose-driven like `action-primary`).
+- [ ] Implement a Dark Mode toggle using these tokens.
 
 ### 3. The "Smart" Feature Card 🃏
-* [ ] Build a card that changes layout using **Container Queries** (size-driven, not viewport-driven).
-* [ ] Use the **`:has()` selector** to style the card parent based on internal state (e.g., if a "featured" checkbox is checked).
-* [ ] Use **Native CSS Nesting** for all component styles.
+
+- [ ] Build a card that changes layout using **Container Queries** (size-driven, not viewport-driven).
+- [ ] Use the **`:has()` selector** to style the card parent based on internal state (e.g., if a "featured" checkbox is checked).
+- [ ] Use **Native CSS Nesting** for all component styles.
 
 ### 4. Documentation with `docmd` 📝
-* [ ] Document the color system in `docs/colors.md`.
-* [ ] Create a component spec for the Feature Card.
+
+- [ ] Document the color system in `docs/colors.md`.
+- [ ] Create a component spec for the Feature Card.
 
 ### 5. The AI Safety Net Refactor 🤖
-* [ ] Identify "legacy" styles in the boilerplate.
-* [ ] Refactor them into the `@layer components` block.
-* [ ] Use an AI to compare "Before" and "After" screenshots to ensure zero visual regression.
+
+- [ ] Identify "legacy" styles in the boilerplate.
+- [ ] Refactor them into the `@layer components` block.
+- [ ] Use an AI to compare "Before" and "After" screenshots to ensure zero visual regression.
 
 ---
 
@@ -200,14 +216,14 @@ interface User extends CrudEntity {
 
 const userService = createCrudService<User>({
   entityKey: "users",
-  baseUrl: "/api/users",  // or your API base URL
+  baseUrl: "/api/users", // or your API base URL
 });
 
 // Use the generated hooks
 const { useGetList, useGetItem, useCreate, useUpdate, useDelete } = userService;
-const { data: users } = useGetList();  // optional: useGetList({ role: "admin" }) when using ListParams
+const { data: users } = useGetList(); // optional: useGetList({ role: "admin" }) when using ListParams
 const { mutate: createUser } = useCreate();
-createUser({ name: "Jane", email: "jane@example.com" });  // id omitted
+createUser({ name: "Jane", email: "jane@example.com" }); // id omitted
 ```
 
 Example server-side usage (pure functions):
