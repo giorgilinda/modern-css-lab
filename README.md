@@ -26,20 +26,21 @@ This project is a deep dive into the "Great CSS Expansion," focusing on modern a
 
 ### 1. The Layered Foundation 🧅
 
-- [ ] Define a global layer hierarchy: `reset`, `base`, `tokens`, `components`, `utilities`.
-- [ ] Ensure `utilities` always wins by placing it last in the order.
+- [x] Define a global layer hierarchy: `reset`, `base`, `tokens`, `components`, `utilities`.
+- [x] Ensure `utilities` always wins by placing it last in the order.
 
 ### 2. The Color Pipeline 🎨
 
-- [ ] Define **Primitive** tokens (raw colors like `blue-500`).
-- [ ] Map them to **Semantic** tokens (purpose-driven like `action-primary`).
-- [ ] Implement a Dark Mode toggle using these tokens.
+- [x] Define **Primitive** tokens (raw colors like `blue-500`).
+- [x] Map them to **Semantic** tokens (purpose-driven like `action-primary`).
+- [x] Implement a Dark Mode toggle using these tokens.
 
-### 3. The "Smart" Feature Card 🃏
+### 3. The "Smart" Feature Card 🃏 (Expanded)
 
-- [ ] Build a card that changes layout using **Container Queries** (size-driven, not viewport-driven).
-- [ ] Use the **`:has()` selector** to style the card parent based on internal state (e.g., if a "featured" checkbox is checked).
-- [ ] Use **Native CSS Nesting** for all component styles.
+- [x] Implement automated accessibility logic via **Relative Color Syntax**.
+- [ ] Build a **Masonry Layout** using native CSS Grid properties.
+- [ ] Add **Scroll-Driven Animations** to reveal cards as they enter the viewport.
+- [ ] Use the **`:has()` selector** for state-driven parent styling.
 
 ### 4. Documentation with `docmd` 📝
 
@@ -51,6 +52,12 @@ This project is a deep dive into the "Great CSS Expansion," focusing on modern a
 - [ ] Identify "legacy" styles in the boilerplate.
 - [ ] Refactor them into the `@layer components` block.
 - [ ] Use an AI to compare "Before" and "After" screenshots to ensure zero visual regression.
+
+### 6. Next-Gen Native UI 🎈
+
+- [ ] Implement a "More Info" overlay using the **Popover API**.
+- [ ] Use **Anchor Positioning** to pin tooltips/menus to specific card elements.
+- [ ] Create a custom-styled theme picker using **Select Customization**.
 
 ---
 

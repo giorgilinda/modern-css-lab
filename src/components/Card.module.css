@@ -1,5 +1,7 @@
 .card {
   background: var(--color-surface);
+  border-width: 1px;
+  border-style: solid;
   border-radius: var(--radius-lg);
   padding: var(--space-lg);
   box-shadow: var(--shadow-md);
@@ -14,4 +16,29 @@
   margin: 0 0 var(--space-md) 0;
   font-size: var(--font-size-xl);
   color: var(--color-text-primary);
+}
+
+.tags {
+  margin: var(--space-md) 0;
+}
+
+.active {
+  border-color: var(--color-primary);
+}
+
+.new,
+.hot,
+.featured {
+  border-color: var(--color-accent);
+}
+
+.archived,
+.draft {
+  border-color: var(--color-border);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-column-gap: var(--space-md);
 }
